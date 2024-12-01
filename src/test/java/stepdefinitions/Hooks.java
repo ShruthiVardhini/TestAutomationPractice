@@ -1,9 +1,9 @@
-package features;
+package stepdefinitions;
 
+import utills.CommonUtils;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
-import utills.CommonUtils;
 
 public class Hooks extends CommonUtils {
 

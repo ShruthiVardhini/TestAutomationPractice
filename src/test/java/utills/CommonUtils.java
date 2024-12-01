@@ -9,7 +9,7 @@ public class CommonUtils extends QAPracticeUtils{
     public static WebDriver driver;
 
 
-    public void navigateToLoginPage() throws InterruptedException {
+    public void navigateToLoginPage() {
 
         WebElement formsTab = driver.findElement(By.xpath("//a[@id='forms']"));
         System.out.println("formsTab located: " + formsTab);

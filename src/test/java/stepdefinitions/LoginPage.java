@@ -1,4 +1,4 @@
-package features;
+package stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,10 @@ public class LoginPage {
     WebElement passwordBox;
 
     @FindBy(xpath="//button[@id='submitLoginBtn']")
-    WebElement loginSubmitBtn;
+     public WebElement loginSubmitBtn;
+
+    @FindBy(id="message")
+    WebElement loginErrorMessage;
 
 public LoginPage(WebDriver driver)
 {
@@ -28,6 +31,10 @@ public void Login(String emailId, String password)
     emailIdBox.sendKeys(emailId);
     passwordBox.sendKeys(password);
     loginSubmitBtn.click();
+}
+public boolean isMessageDisplayed()
+{
+    return loginErrorMessage.isDisplayed();
 }
 
 }
